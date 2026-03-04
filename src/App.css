@@ -1,0 +1,107 @@
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background: linear-gradient(180deg, #eef2f7 0%, #f7f9fc 100%);
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #dfe5ef;
+  background: #ffffff;
+  padding: 12px 18px;
+}
+
+.title {
+  margin-right: 6px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #233142;
+}
+
+.group {
+  display: inline-flex;
+  overflow: hidden;
+  border: 1px solid #cfd8e4;
+  border-radius: 10px;
+}
+
+.toolbar-button {
+  border: 0;
+  border-right: 1px solid #d8e0ea;
+  background: #ffffff;
+  color: #34495e;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.toolbar-button:last-child {
+  border-right: 0;
+}
+
+.toolbar-button:hover:not(:disabled) {
+  background: #f1f5f9;
+}
+
+.toolbar-button.active {
+  background: #2f9e44;
+  color: #ffffff;
+}
+
+.toolbar-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.banner {
+  border-bottom: 1px solid #dbe5f1;
+  background: #fff8db;
+  color: #7a5a06;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.workspace {
+  flex: 1;
+  padding: 16px;
+}
+
+.editor-section {
+  min-height: 620px;
+  overflow: hidden;
+  border: 1px solid #dbe3ef;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.editor-container {
+  height: 100%;
+  width: 100%;
+}
+
+.placeholder {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  text-align: center;
+  padding: 20px;
+  color: #32455a;
+  font-weight: 600;
+}
+
+@media (max-width: 1100px) {
+  .editor-section {
+    min-height: 520px;
+  }
+}
